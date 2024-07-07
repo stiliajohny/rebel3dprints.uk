@@ -8,7 +8,7 @@ office:
   email : "gearup@rebel3dprints.uk"
   location : "London, UK"
   content : "Drop me a line, "
-  instagram: "rebel3dprints"
+  instagram: "rebel3dprints.uk"
 
 # opennig hour
 opennig_hour:
