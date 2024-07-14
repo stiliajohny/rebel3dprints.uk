@@ -48,7 +48,7 @@ link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
 
 ###################################### Navigation ######################################
 
-# homepage section menu
+# Main menu
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -59,16 +59,22 @@ name = "Gear"
 url = "products/"
 weight = 2
 
-# [[menu.main]]
-# name = "Blog"
-# url = "blog/"
-# weight = 3
-
 [[menu.main]]
 name = "Contact"
 url = "contact/"
 weight = 4
 
+[[menu.main]]
+name = "Blog"
+url = "blog/"
+weight = 3
+
+[[menu.main]]
+name = "Terms & Conditions"
+url = "terms-conditions/"
+weight = 5
+
+# Footer menu
 [[menu.footer]]
 name = "Contact"
 url = "contact/"
@@ -82,7 +88,7 @@ weight = 3
 [[menu.footer]]
 name = "Instagram"
 url = "https://www.instagram.com/rebel3dprints.uk/"
-
+weight = 4
 
 ########################### Default parameters ##########################
 [params]

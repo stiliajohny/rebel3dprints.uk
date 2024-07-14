@@ -2,11 +2,31 @@
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
 
+<head>
+    {{- partial "head.html" . -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://rebel3dprints.uk",
+      "logo": "https://rebel3dprints.uk/images/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+447572785067",
+        "contactType": "Customer Service"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/rebel3dprints.uk/"
+      ]
+    }
+    </script>
+</head>
+
 <body id="body">
-	{{- partial "preloader.html" . -}}
-	{{- partial "header.html" . -}}
-	{{- block "main" . }}{{- end }}
-	{{- partial "footer.html" . -}}
+    {{- partial "preloader.html" . -}}
+    {{- partial "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "footer.html" . -}}
 </body>
 
 </html>
