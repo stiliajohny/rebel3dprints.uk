@@ -3,7 +3,6 @@ title: "Ducati Keyring"
 sku: "DUCATI12345"
 date: 2024-06-01T11:22:16+01:00
 images:
-  - "images/products/keyring/ducati/ducati-0.gif"
   - "images/products/keyring/ducati/ducati-1.jpeg"
   - "images/products/keyring/ducati/ducati-2.jpeg"
   - "images/products/keyring/ducati/ducati-3.jpeg"
