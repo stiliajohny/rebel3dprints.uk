@@ -6,6 +6,7 @@ images:
   - "images/products/mount/gopro-quadlock/gopro-mount0.jpeg"
   - "images/products/mount/gopro-quadlock/gopro-mount1.jpeg"
   - "images/products/mount/gopro-quadlock/gopro-mount2.jpeg"
+  - "images/products/mount/gopro-quadlock/gopro-mount3.jpeg"
 
 
 price: "4.91"
