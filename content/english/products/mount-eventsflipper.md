@@ -32,9 +32,9 @@ The 🐬Events Flipper🐬 is a foldable license plate holder designed specifica
 {{< specs
     material="High-strength plastic (PETG)"
     dimensions="200x100x20 mm"
-    weight="150 grams"
-    compatibility="Standard car and motorbike license plates"
-    usage_instructions="Easily attach and fold the plate cover over your existing license plate. Unfold for normal use after the event."
+    weight="230 grams"
+    compatibility="Fit to order for any license plate size"
+    usage_instructions="Easily attach and fold the plate cover over your existing license plate holder or on the motorbike base. Unfold for normal use after the event."
     care_and_maintenance="Wipe with a damp cloth, avoid exposure to extreme heat."
     warranty_information="1-Year Warranty - Free replacement for any defects"
     environmental_or_safety_information="Made from recycled materials, non-toxic. Recycle with Plastics"
