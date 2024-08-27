@@ -69,10 +69,6 @@ name = "Contact"
 url = "contact/"
 weight = 4
 
-[[menu.main]]
-name = "Blog"
-url = "blog/"
-weight = 5
 
 [[menu.main]]
 name = "Terms & Conditions"
@@ -149,6 +145,6 @@ copyright = "© 2024 Rebel 3D Prints. All rights reserved."
 
 [services]
   [services.googleAnalytics]
-    ID = 'G-MEASUREMENT_ID'
+    ID = 'G-CT7VLBMDSJ'
 
 ignoreFiles = ['\.3mf$', '\.stl$']

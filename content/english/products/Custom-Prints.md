@@ -25,7 +25,6 @@ gtin: "1234567890123"  # Added GTIN
 mpn: "BHGP12345"  # Added MPN
 button_link: "https://wa.link/tl9v2f"
 
-
 ---
 
 Transform your ideas into reality with our high-quality 3D printed models. Showcase the iconic Brands Hatch Track with its new 300 circuit layout. Ideal for racing enthusiasts.
@@ -34,3 +33,4 @@ Transform your ideas into reality with our high-quality 3D printed models. Showc
 
 > This is not a real item.
 > Please contact us to give you a quote based on the specific item you would like to print
+
