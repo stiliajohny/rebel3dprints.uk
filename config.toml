@@ -60,7 +60,7 @@ url = "products/"
 weight = 2
 
 [[menu.main]]
-name = "Custom Print"
+name = "Custom Prints"
 url = "custom-print/"
 weight = 3
 

@@ -1,5 +1,5 @@
 ---
-title: "Bring Ideas to Life"
+title: "Custom Prints"
 # description: "This document outlines the terms and conditions for the purchase and use of Rebel 3D Prints products."
 draft: false
 ---
