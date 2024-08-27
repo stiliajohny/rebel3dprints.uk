@@ -46,7 +46,7 @@ features:
 
 ############################# promo ############################
 promo:
-  enable: true
+  enable: false
   image: "images/crosscut.png"
   title: "Built by Bikers"
   content: "We know what works because we're on the road with you. Every product is tested and tweaked until it's just right."
