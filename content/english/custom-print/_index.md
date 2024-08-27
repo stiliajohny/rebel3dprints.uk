@@ -1,6 +1,6 @@
 ---
-title: "Terms & Conditions"
-description: "This document outlines the terms and conditions for the purchase and use of Rebel 3D Prints products."
+title: "Bring Ideas to Life"
+# description: "This document outlines the terms and conditions for the purchase and use of Rebel 3D Prints products."
 draft: false
 ---
 
