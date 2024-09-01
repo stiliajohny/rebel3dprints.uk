@@ -196,6 +196,11 @@
     margin: 3rem auto;
   }
 
+  .contact-cta p {
+    color: #fff; /* Ensure the text color is white for visibility */
+    margin-bottom: 1rem;
+  }
+
   .cta-button {
     background-color: #007BFF;
     color: #fff;
@@ -209,7 +214,24 @@
   .cta-button:hover {
     background-color: #0056b3;
   }
+
+  /* Mobile Adjustments */
+  @media only screen and (max-width: 768px) {
+    .contact-cta {
+      background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background for better contrast */
+    }
+
+    .contact-cta h2, .contact-cta p {
+      color: #fff; /* Ensure text is white */
+    }
+
+    .cta-button {
+      width: 100%; /* Make the button full width on mobile */
+      margin-top: 1rem;
+    }
+  }
 </style>
+
 
 <script>
   function moveCarousel(direction) {
