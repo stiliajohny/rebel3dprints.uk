@@ -1,5 +1,5 @@
 ---
-title: "Check our Gear"
-description: "Check out our range of essential bike tools and accessories. From precise chain lubrication to customized mirror blanking plates, we've got everything you need to keep your bike in top condition and reflect your style."
+title: "Explore Our Products"
+description: "Discover our range of essential tools and accessories. From precise applications to custom-designed components, we offer everything you need to keep your projects on track and showcase your unique style."
 draft: false
 ---
