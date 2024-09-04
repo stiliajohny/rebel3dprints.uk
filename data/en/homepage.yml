@@ -2,12 +2,12 @@
 ############################# banner ############################
 banner:
   enable: true
-  title: "Rebel. Print. Ride."
-  content: "Welcome to our 3D printing hub, where passion for biking meets the precision of digital fabrication. While we're inspired by the thrill of the ride, our creations go beyond the biker world. From bespoke accessories and innovative tools to unique gadgets and more, we bring your ideas to life with a touch of #bikelife flair"
+  title: "Bringing Your Ideas to Life, One Layer at a Time."
+  content: "We turn your designs into high-quality products using advanced technology and skilled expertise. **Your vision, made real.**"
   image: "images/banner.png"  # Consider swapping this for a more relevant image
   button:
     enable: true
-    label: "Check the Gear"
+    label: "Check Out Our Products"
     link: "products/"
 
 ############################# Feature ############################
@@ -89,7 +89,7 @@ subscription:
 #################################### Products ########################
 products:
   enable: true
-  title: "Our Gear Lineup"
+  title: "Our Products Lineup"
 
 ############################## Testimonial ##########################
 testimonial:

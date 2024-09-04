@@ -55,7 +55,7 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Gear"
+name = "Products"
 url = "products/"
 weight = 2
 
