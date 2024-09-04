@@ -5,20 +5,15 @@ date: 2024-04-12T11:22:16+01:00
 images:
   - "images/products/decor/ducati-desk-light/IMG_8332.jpeg"
   - "images/products/decor/ducati-desk-light/IMG_8338.jpeg"
-price: "28.98 GBP"  # Ensured price includes currency
-# discount_price: "20.00"
+file_3mf: "images/products/decor/ducati-desk-light/Ducati Light Box v7-Total.3mf"  # Relative link for 3MF file
+license_type: "Creative Commons — Attribution — Noncommercial"
+price: "28.98 GBP"
 colors: ["White"]
 sizes: ["25x25 cm"]
 draft: false
-weight: "300 grams"  # Specified weight unit
 related_products: ["Motorcycle Enthusiast LED Lamp"]
-availability: "in stock"
 link: "https://rebel3dprints.uk/products/decor-ducati-lamp/"
 image_link: "https://rebel3dprints.uk/images/products/decor/ducati_lamp/ducati_lamp.jpeg"
-description: "Illuminate your space with this unique Ducati logo light box. Perfect for garages, man caves, or desks, it makes an ideal gift for Ducati enthusiasts."
-brand: "Rebel 3D Prints"  # Added brand
-gtin: "1234567891234"  # Added GTIN
-mpn: "DUCLAMP12345"  # Added MPN
 button_link: "https://rebel3dprintsuk.etsy.com/uk/listing/1721624876/ducati-logo-usb-lamp"
 ---
 Illuminate your space with this unique Ducati logo light box. Perfect for garages, man caves, or desks, it makes an ideal gift for Ducati enthusiasts.

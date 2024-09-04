@@ -6,22 +6,16 @@ images:
   - "images/products/keyring/ducati/ducati-1.jpeg"
   - "images/products/keyring/ducati/ducati-2.jpeg"
   - "images/products/keyring/ducati/ducati-3.jpeg"
+file_3mf: "images/products/keyring/ducati/Ducati Keychain.3mf"
+license_type: "Creative Commons — Attribution — Noncommercial"
 price: "3.49"
-# discount_price: "25.00"
 colors: ["One Colour"]
 sizes: ["One Size"]
 draft: false
 weight: "25 grams"
 related_products: ["Ducati Track Model"]
-availability: "in stock"
 link: "https://rebel3dprints.uk/products/keyrings/custom-ducati-keyring"
 image_link: "https://rebel3dprints.uk/images/products/keyrings/custom-ducati-keyring.jpeg"
-description: "Personalise your own Ducati keyring with up to 10-12 characters. Choose from multiple styles and ensure a unique touch to your keys or bag."
-brand: "Rebel 3D Prints"
-gtin: "9876543210987"
-mpn: "DUCATI12345"
-
-# button link if you don't want to use snipcart. empty link will not show button
 button_link: "https://rebel3dprintsuk.etsy.com/uk/listing/1735913414/ducati-keyring-stylish-motorcycle"
 ---
 

@@ -1,33 +1,23 @@
 ---
-title: "🐬Events Flipper🐬 Foldable License Plate Holder"
+title: "🐬Events Flipper🐬 Foldable License Plate Holder - Honda Fireblade 2004"
 sku: "FLIP12345"
 date: 2024-08-25T11:22:16+01:00
 images:
   - "images/products/mount/license-plate/EventFlipper-2.gif"
   - "images/products/mount/license-plate/EventFlipper-0.jpg"
   - "images/products/mount/license-plate/EventFlipper-1.jpg"
-
 price: "18.99+"
-# discount_price: "12.99"
 colors: ["Black", "Red", "Blue"]
 sizes: ["One Size"]
 draft: false
-weight: "150 grams"
 related_products: ["Customisable Car Number Registration Reg Plate Keyring Keychain Personalised", "Perfect Gift for Motorbike Fans: USB-Powered Illuminated Table Lamp with Custom Symbol"]
-availability: "in stock"
 link: "https://rebel3dprints.uk/products/flippers/events-flipper"
 image_link: "https://rebel3dprints.uk/images/products/flippers/events-flipper.jpeg"
-description: "The 🐬Events Flipper🐬 is a foldable license plate holder designed for events, allowing users to easily cover their plates for better photos, protection against plate cloning, and compliance with event rules."
-brand: "Rebel 3D Prints"
-gtin: "0987654321098"
-mpn: "FLIP12345"
-
-# button link if you don't want to use snipcart. empty link will not show button
 button_link: "https://api.whatsapp.com/send/?phone=447572785067&text=Hi%21+I%27m+excited+to+learn+more+about+the+%F0%9F%90%ACEvents+Flipper%F0%9F%90%AC+and+how+it+works%21&type=phone_number&app_absent=0"
 
 ---
 
-The 🐬Events Flipper🐬 is a foldable license plate holder designed specifically for events. Whether you want better photos, protection against plate cloning, or to comply with event rules, this product has you covered – literally. 
+The 🐬Events Flipper🐬 is a foldable license plate holder designed specifically for events. Whether you want better photos, protection against plate cloning, or to comply with event rules, this product has you covered – literally.
 
 {{< specs
     material="High-strength plastic (PETG)"

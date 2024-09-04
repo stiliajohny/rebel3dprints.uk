@@ -5,20 +5,16 @@ date: 2024-04-12T11:22:16+01:00
 images:
   - "images/products/decor/isle-of-man/IMG_8342.jpeg"
   - "images/products/decor/isle-of-man/isle-of-man-tt.jpeg"
-price: "5.89 GBP"  # Ensured price includes currency
-# discount_price: "25.00"
+file_3mf: "images/products/decor/isle-of-man/Isle of Man TT track v7+Podium-Multicolour.3mf"  # Relative link for 3MF file
+license_type: "Creative Commons — Attribution — Noncommercial"
+price: "5.89 GBP"
 colors: ["White", "Red", "Green", "Blue", "Black", "Black/Red"]  # Corrected color formatting
 sizes: ["One Size"]
-draft: false  # Corrected capitalization
-weight: "100 grams"  # Specified weight unit
+draft: false
 related_products: ["Donington Park GP Track Model"]
 availability: "in stock"
 link: "https://rebel3dprints.uk/products/decor-isle-of-man-tt/"
 image_link: "https://rebel3dprints.uk/images/products/decor/isle-of-man/isle-of-man-tt.jpeg"
-description: "Bring the iconic Isle of Man TT into your home with this meticulously crafted 3D printed model. Perfect for display or as a collector's piece for any motorbike enthusiast."
-brand: "Rebel 3D Prints"  # Added brand
-gtin: "1234567890123"  # Added GTIN
-mpn: "IOMTT12345"  # Added MPN
 button_link: "https://rebel3dprintsuk.etsy.com/uk/listing/1721624874/silverstone-race-track-scale-model-with"
 ---
 

@@ -15,42 +15,204 @@
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{ .Title }}</h1>
-        {{ with .Params.colors }}<p><strong>Colors: </strong>{{ delimit . ", " | title}}</p>{{ end }}
-        {{ with .Params.sizes }}<p><strong>Sizes: </strong>{{ delimit . ", " | title}}</p>{{ end }}
-        <p class="price py-4">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
-        {{if .Params.discount_price}}<s class="price">{{site.Params.currency}}{{ .Params.price }}</s>{{end}}
+        {{ with .Params.colors }}<p><strong>Colors: </strong>{{ delimit . ", " | title }}</p>{{ end }}
+        {{ with .Params.sizes }}<p><strong>Sizes: </strong>{{ delimit . ", " | title }}</p>{{ end }}
+        <p class="price py-4">{{ if .Params.discount_price }}{{ site.Params.currency }}{{ .Params.discount_price }}{{ else }}{{ site.Params.currency }}{{ .Params.price }}{{ end }}
+        {{ if .Params.discount_price }}<s class="price">{{ site.Params.currency }}{{ .Params.price }}</s>{{ end }}
         </p>
+
+        <!-- Purchase button -->
         {{ if site.Params.snipcart.enable }}
         <button class="snipcart-add-item btn btn-main mb-5" 
-          data-item-id="{{.Title | urlize}}__{{if .Params.discount_price}}{{.Params.discount_price}}{{else}}{{.Params.price}}{{end}}"
-          data-item-name="{{.Title}}"
-          data-item-weight="{{ .Params.Weight }}"
-          data-item-image="{{with .Params.Images}} {{range first 1 . }}{{. | absURL}}{{end}}{{end}}"
-          data-item-price="{{if .Params.discount_price}}{{.Params.discount_price}}{{else}}{{.Params.price}}{{end}}" 
-          data-item-url="{{.Permalink}}" 
+          data-item-id="{{ .Title | urlize }}__{{ if .Params.discount_price }}{{ .Params.discount_price }}{{ else }}{{ .Params.price }}{{ end }}"
+          data-item-name="{{ .Title }}"
+          data-item-weight="{{ .Params.weight }}"
+          data-item-image="{{ with .Params.images }}{{ range first 1 . }}{{ . | absURL }}{{ end }}{{ end }}"
+          data-item-price="{{ if .Params.discount_price }}{{ .Params.discount_price }}{{ else }}{{ .Params.price }}{{ end }}" 
+          data-item-url="{{ .Permalink }}" 
           {{ if .Params.colors }}
           data-item-custom1-name="Choose Color"
-          data-item-custom1-options="{{range $index, $element:= .Params.colors}}{{ if eq $index 0 }}{{. | title}}{{ else }}|{{. | title }}{{end}}{{end}}"
+          data-item-custom1-options="{{ range $index, $element := .Params.colors }}{{ if eq $index 0 }}{{ . | title }}{{ else }}|{{ . | title }}{{ end }}{{ end }}"
           {{ end }}
           {{ if .Params.sizes }}
           data-item-custom2-name="Choose Size"
-          data-item-custom2-options="{{range $index, $element:= .Params.sizes}}{{if eq $index 0}}{{. | title}}{{else}}|{{. | title}}{{end}}{{end}}"
-          {{end}}>
-          {{i18n "add_to_cart"}}
-
-
+          data-item-custom2-options="{{ range $index, $element := .Params.sizes }}{{ if eq $index 0 }}{{ . | title }}{{ else }}|{{ . | title }}{{ end }}{{ end }}"
+          {{ end }}>
+          {{ i18n "add_to_cart" }}
         </button>
         {{ else }}
-        {{ with .Params.button_link}}
-        <a class="btn btn-main mb-5" href="{{ . | absURL }}">{{i18n "add_to_cart"}}</a>
-        {{ end }}
+        <a class="btn btn-main mb-5" href="{{ .Params.button_link | absURL }}">{{ i18n "add_to_cart" }}</a>
         {{ end }}
 
-        <div class="content">{{.Content}}</div>
+        <!-- Print Me button for 3MF file -->
+        {{ with .Params.file_3mf }}
+          <!-- Print Me button opens modal instead of direct print -->
+          <a class="btn btn-main mb-5" href="#" id="printMeBtn">Print Me</a>
+        {{ end }}
+
+        <!-- License Information -->
+        {{ with .Params.license_type }}
+        <p><strong>License: </strong>{{ . }}</p>
+        {{ end }}
+
+        <div class="content">{{ .Content }}</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal for Order Number Input -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Enter Key</h2>
+    <p>Please enter the key provided to you:</p>
+    <input type="text" id="cdKey" placeholder="XXXX-YYYY-ZZZZ-WWWW">
+    <button id="submitKey">Submit</button>
+    <p id="errorMessage" style="color: red; display: none;">Invalid Key</p>
+  </div>
+</div>
+
+<!-- Modal CSS -->
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #cdKey {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #submitKey {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #submitKey:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<!-- Modal JavaScript for CD Key Validation -->
+<script>
+  // Utility to calculate a checksum based on the first three segments of the key
+  async function calculateChecksum(keyWithoutChecksum) {
+    // Convert string to UTF-8 and hash with SHA-256
+    const encoder = new TextEncoder();
+    const data = encoder.encode(keyWithoutChecksum);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    // Return the first 4 characters of the hash
+    return hashHex.slice(0, 4).toUpperCase();
+  }
+
+  // Function to validate the key
+  async function validateKey(cdKey) {
+    // Regular expression to match the format XXXX-YYYY-ZZZZ-WWWW
+    const regex = /^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
+    
+    // Check if the format matches
+    if (!regex.test(cdKey)) {
+      return false;
+    }
+
+    // Split key into segments
+    const segments = cdKey.split('-');
+    const keyWithoutChecksum = segments[0] + segments[1] + segments[2];
+    const providedChecksum = segments[3];
+
+    // Calculate expected checksum
+    const expectedChecksum = await calculateChecksum(keyWithoutChecksum);
+
+    // Compare provided checksum with expected checksum
+    return providedChecksum === expectedChecksum;
+  }
+
+  // Get modal elements
+  const modal = document.getElementById("orderModal");
+  const btn = document.getElementById("printMeBtn");
+  const span = document.getElementsByClassName("close")[0];
+  const submitBtn = document.getElementById("submitKey");
+  const errorMessage = document.getElementById("errorMessage");
+
+  // Print file link (encoded 3MF file URL)
+  const encoded3MF = "{{ .Params.file_3mf | absURL | urlquery }}";
+  const printLink = `bambustudioopen://${encoded3MF}`;
+
+  // Open the modal when "Print Me" is clicked
+  btn.onclick = function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  };
+
+  // Close the modal when "X" is clicked
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Close the modal if the user clicks outside of it
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Handle the form submission
+  submitBtn.onclick = async function () {
+    const cdKey = document.getElementById("cdKey").value;
+
+    if (await validateKey(cdKey)) {
+      // CD key is valid, redirect to print link
+      window.location.href = printLink;
+    } else {
+      // Invalid CD key, show error message
+      errorMessage.style.display = "block";
+    }
+  };
+</script>
+
+
 <section class="section" >
   <div class="container">
     <div class="heading text-center mb-40">
@@ -83,6 +245,5 @@
     </div>
   </div>
 </section>
-
 
 {{ end }}

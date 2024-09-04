@@ -2,7 +2,7 @@
 ############################# banner ############################
 banner:
   enable: true
-  title: "Bringing Your Ideas to Life, One Layer at a Time."
+  title: "Make it 3D."
   content: "We turn your designs into high-quality products using advanced technology and skilled expertise. **Your vision, made real.**"
   image: "images/banner.png"  # Consider swapping this for a more relevant image
   button:

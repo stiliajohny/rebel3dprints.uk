@@ -7,24 +7,15 @@ images:
   - "images/products/mount/gopro-quadlock/gopro-mount1.jpeg"
   - "images/products/mount/gopro-quadlock/gopro-mount2.jpeg"
   - "images/products/mount/gopro-quadlock/gopro-mount3.jpeg"
-
-
+file_3mf: "images/products/mount/gopro-quadlock/Quadlock gopro final.3mf"
+license_type: "Creative Commons — Attribution — Noncommercial"
 price: "4.91"
-# discount_price: "25.00"
 colors: ["Black","Red", "Green", "Blue", "White"]
 sizes: ["One Size"]
 draft: false
-weight: "50 grams"
 related_products: ["Customisable Car Number Registration Reg Plate Keyring Keychain Personalised", "Perfect Gift for Ducati Fans: USB-Powered Illuminated Table Lamp with Ducati Symbol"]
-availability: "in stock"
 link: "https://rebel3dprints.uk/products/mounts/gopro-quadlock"
 image_link: "https://rebel3dprints.uk/images/products/mounts/gopro-quadlock-mount.jpeg"
-description: "Securely attach your GoPro to your Quad Lock mount with our custom-designed adapter. Perfect for capturing your rides with ease and stability."
-brand: "Rebel 3D Prints"
-gtin: "1234567890123"
-mpn: "GPMQL12345"
-
-# button link if you don't want to use snipcart. empty link will not show button
 button_link: "https://rebel3dprintsuk.etsy.com/uk/listing/1748162309/quadlock-goproinsta360dji-action-camera"
 
 ---

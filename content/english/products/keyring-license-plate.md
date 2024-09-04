@@ -7,25 +7,17 @@ images:
   - "images/products/keyring/license-plate/license-keyring0.jpeg"
   - "images/products/keyring/license-plate/license-keyring1.jpeg"
   - "images/products/keyring/license-plate/license-keyring3.jpeg"
-
+# file_3mf: ""
+# license_type: "Creative Commons — Attribution — Noncommercial"
 price: "3.49"
-# discount_price: "25.00"
 colors: ["Yellow with Blue Bar", "Yellow with No Bar", "White with Blue Bar"]
 sizes: ["One Size"]
 draft: false
 weight: "25 grams"
 related_products: ["Silverstone Track Model"]
-availability: "in stock"
 link: "https://rebel3dprints.uk/products/keyrings/custom-car-reg-plate"
 image_link: "https://rebel3dprints.uk/images/products/keyrings/custom-car-reg-plate-keyring.jpeg"
-description: "Personalise your own car number registration plate keyring with up to 10-12 characters. Choose from multiple styles and ensure a unique touch to your keys or bag."
-brand: "Rebel 3D Prints"
-gtin: "9876543210987"
-mpn: "CCNRP12345"
-
-# button link if you don't want to use snipcart. empty link will not show button
 button_link: "https://www.etsy.com/uk/listing/1725666578/customisable-car-number-registration-reg"
-
 ---
 
 Personalise your own car number registration plate keyring with up to 10-12 characters. Choose from multiple styles and ensure a unique touch to your keys or bag.
