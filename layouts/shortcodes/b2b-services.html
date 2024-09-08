@@ -5,62 +5,84 @@
     <p>Empowering businesses and professionals with high-quality, tailored 3D printing services that elevate projects, streamline production, and enhance creativity with our advanced FDM and SLA Resin technologies.</p>
   </div>
 
-  <!-- Our 3D Printing Services -->
+  <!-- 3D Printing Tabs -->
   <div class="b2b-services">
-    <h2>Transformative 3D Printing Services</h2>
-    <div class="service-carousel">
-      <button class="carousel-control left" onclick="moveCarousel(-1)">&#10094;</button>
-      <div class="service-carousel-inner">
+    <h2>Explore Our 3D Printing Services</h2>
+    <div class="tab-container">
+      <button class="tab-btn" onclick="openTab('fdm')">FDM Printing</button>
+      <button class="tab-btn" onclick="openTab('sla')">SLA Printing</button>
+    </div>
+
+    <div class="tab-content" id="fdm">
+      <div class="service-cards">
         <!-- FDM Smooth -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('fdmSmooth')">
           <img src="/images/b2b/icons/fdm.png" alt="FDM Smooth 3D Printing" class="service-icon">
           <h3>FDM Smooth</h3>
-          <p>Sleek finishes with excellent strength, ideal for aesthetic and functional parts.</p>
         </div>
 
         <!-- FDM Fuzzy Skin -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('fdmFuzzySkin')">
           <img src="/images/b2b/icons/fdm.png" alt="FDM Fuzzy Skin 3D Printing" class="service-icon">
           <h3>FDM Fuzzy Skin</h3>
-          <p>Unique texture for enhanced grip and distinct visual appeal.</p>
         </div>
 
         <!-- FDM Multicolor -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('fdmMulticolor')">
           <img src="/images/b2b/icons/fdm.png" alt="FDM Multicolor 3D Printing" class="service-icon">
           <h3>FDM Multicolor</h3>
-          <p>Vibrant, multi-color prints that bring your designs to life with precision.</p>
         </div>
 
+        <!-- FDM Flexible TPU -->
+        <div class="service-card" onclick="openModal('fdmFlexibleTPU')">
+          <img src="/images/b2b/icons/fdm.png" alt="FDM Flexible TPU 3D Printing" class="service-icon">
+          <h3>FDM Flexible TPU</h3>
+        </div>
+
+        <!-- FDM Carbon Fiber -->
+        <div class="service-card" onclick="openModal('fdmCarbonFiber')">
+          <img src="/images/b2b/icons/fdm.png" alt="FDM Carbon Fiber 3D Printing" class="service-icon">
+          <h3>FDM Carbon Fiber</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="sla" style="display:none">
+      <div class="service-cards">
         <!-- SLA High Temp Resin -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('slaHighTempResin')">
           <img src="/images/b2b/icons/sla.png" alt="SLA High Temp Resin 3D Printing" class="service-icon">
           <h3>SLA High Temp Resin</h3>
-          <p>Perfect for applications requiring heat resistance and precision.</p>
         </div>
 
         <!-- SLA Flexible Resin -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('slaFlexibleResin')">
           <img src="/images/b2b/icons/sla.png" alt="SLA Flexible Resin 3D Printing" class="service-icon">
           <h3>SLA Flexible Resin</h3>
-          <p>Flexible yet durable prints for custom-fit parts and dynamic applications.</p>
         </div>
 
         <!-- SLA Tough Resin -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('slaToughResin')">
           <img src="/images/b2b/icons/sla.png" alt="SLA Tough Resin 3D Printing" class="service-icon">
           <h3>SLA Tough Resin</h3>
-          <p>High-strength resin perfect for functional prototypes and production parts.</p>
         </div>
 
         <!-- SLA Transparent Resin -->
-        <div class="service-box">
+        <div class="service-card" onclick="openModal('slaTransparentResin')">
           <img src="/images/b2b/icons/sla.png" alt="SLA Transparent Resin 3D Printing" class="service-icon">
           <h3>SLA Transparent Resin</h3>
-          <p>Crystal-clear prints ideal for optical and aesthetic applications.</p>
         </div>
       </div>
-      <button class="carousel-control right" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="serviceTitle"></h2>
+      <img id="serviceImage" class="modal-icon" alt="Service Image">
+      <p id="serviceDescription"></p>
     </div>
   </div>
 
@@ -91,7 +113,7 @@
 </section>
 
 <style>
-  /* Refined Visuals for Central Column Layout */
+  /* General Page Styling */
   .b2b-services-page {
     font-family: Arial, sans-serif;
     color: #333;
@@ -112,131 +134,189 @@
     color: #007BFF;
   }
 
-  .b2b-services .service-carousel {
+  /* Tabbed Interface */
+  .tab-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
   }
 
-  .service-carousel-inner {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: center;
-  }
-
-  .service-box {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
+  .tab-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
     margin: 0 1rem;
-    flex: 0 0 30%;
+    transition: background-color 0.3s ease;
   }
 
-  .service-box img.service-icon {
+  .tab-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .service-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .service-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .modal-content img.modal-icon {
     width: 150px;
     height: 150px;
     margin-bottom: 1rem;
   }
 
-  .carousel-control {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
   }
 
-  .carousel-control:hover {
-    background-color: #0056b3;
+  .close:hover {
+    color: black;
   }
 
-  .industries-images {
-    display: flex;
-    justify-content: space-around;
-    margin: 3rem 0;
-    gap: 2rem;
-  }
-
-  .industry-image {
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .our-process .process-diagram {
-    width: 100%; /* Make the process image match the width of the page */
-    height: auto;
-    margin: 3rem auto;
-  }
-
-  .our-process p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-    margin: 0 auto;
-    max-width: 80%;
-  }
-
-  .contact-cta {
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 3rem 2rem;
-    color: #fff;
-    border-radius: 8px;
-    margin: 3rem auto;
-  }
-
-  .contact-cta p {
-    color: #fff; /* Ensure the text color is white for visibility */
-    margin-bottom: 1rem;
-  }
-
-  .cta-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: #0056b3;
-  }
-
-  /* Mobile Adjustments */
-  @media only screen and (max-width: 768px) {
-    .contact-cta {
-      background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background for better contrast */
-    }
-
-    .contact-cta h2, .contact-cta p {
-      color: #fff; /* Ensure text is white */
-    }
-
-    .cta-button {
-      width: 100%; /* Make the button full width on mobile */
-      margin-top: 1rem;
-    }
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 </style>
 
-
 <script>
-  function moveCarousel(direction) {
-    const carouselInner = document.querySelector('.service-carousel-inner');
-    const scrollAmount = carouselInner.clientWidth / 3;  // Scroll by the width of 1/3 of the visible area
-    carouselInner.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  // Service Details Data
+  const services = {
+    fdmSmooth: {
+      title: "FDM Smooth",
+      image: "/images/b2b/icons/fdm.png",
+      description: "Sleek finishes with excellent strength, ideal for aesthetic and functional parts."
+    },
+    fdmFuzzySkin: {
+      title: "FDM Fuzzy Skin",
+      image: "/images/b2b/icons/fdm.png",
+      description: "Unique texture for enhanced grip and distinct visual appeal."
+    },
+    fdmMulticolor: {
+      title: "FDM Multicolor",
+      image: "/images/b2b/icons/fdm.png",
+      description: "Vibrant, multi-color prints that bring your designs to life with precision."
+    },
+    fdmFlexibleTPU: {
+      title: "FDM Flexible TPU",
+      image: "/images/b2b/icons/fdm.png",
+      description: "Durable and flexible material, perfect for parts requiring flexibility and elasticity."
+    },
+    fdmCarbonFiber: {
+      title: "FDM Carbon Fiber",
+      image: "/images/b2b/icons/fdm.png",
+      description: "Ultra-strong, lightweight carbon fiber reinforced parts for high-performance applications."
+    },
+    slaHighTempResin: {
+      title: "SLA High Temp Resin",
+      image: "/images/b2b/icons/sla.png",
+      description: "Perfect for applications requiring heat resistance and precision."
+    },
+    slaFlexibleResin: {
+      title: "SLA Flexible Resin",
+      image: "/images/b2b/icons/sla.png",
+      description: "Flexible yet durable prints for custom-fit parts and dynamic applications."
+    },
+    slaToughResin: {
+      title: "SLA Tough Resin",
+      image: "/images/b2b/icons/sla.png",
+      description: "High-strength resin perfect for functional prototypes and production parts."
+    },
+    slaTransparentResin: {
+      title: "SLA Transparent Resin",
+      image: "/images/b2b/icons/sla.png",
+      description: "Crystal-clear prints ideal for optical and aesthetic applications."
+    }
+  };
+
+  // Modal Handling
+  function openModal(serviceKey) {
+    const service = services[serviceKey];
+    document.getElementById('serviceTitle').innerText = service.title;
+    document.getElementById('serviceImage').src = service.image;
+    document.getElementById('serviceDescription').innerText = service.description;
+    document.getElementById('serviceModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('serviceModal').style.display = "none";
+  }
+
+  // Tab Handling
+  function openTab(tabName) {
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.style.display = 'none');
+    document.getElementById(tabName).style.display = 'block';
+  }
+
+  // Default tab open
+  openTab('fdm');
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('serviceModal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
   }
 </script>
