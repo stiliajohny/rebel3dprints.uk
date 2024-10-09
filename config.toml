@@ -59,10 +59,10 @@ name = "Products"
 url = "products/"
 weight = 2
 
-[[menu.main]]
-name = "Custom Prints"
-url = "custom-print/"
-weight = 3
+#[[menu.main]]
+#name = "Custom Prints"
+#url = "custom-print/"
+#weight = 3
 
 [[menu.main]]
 name = "Contact"
